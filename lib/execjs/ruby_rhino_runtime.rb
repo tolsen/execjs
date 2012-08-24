@@ -7,7 +7,6 @@ module ExecJS
         source = encode(source)
 
         @rhino_context = ::Rhino::Context.new
-        fix_memory_limit! @rhino_context
         @rhino_context.eval(source)
       end
 
